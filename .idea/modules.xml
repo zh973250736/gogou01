@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gogou/gogou.iml" filepath="$PROJECT_DIR$/gogou/gogou.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-basic-parent/gogou-basic-generator/gogou-basic-generator.iml" filepath="$PROJECT_DIR$/gogou-basic-parent/gogou-basic-generator/gogou-basic-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-basic-parent/gogou-basic-parent.iml" filepath="$PROJECT_DIR$/gogou-basic-parent/gogou-basic-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-basic-parent/gogou-basic-util/gogou-basic-util.iml" filepath="$PROJECT_DIR$/gogou-basic-parent/gogou-basic-util/gogou-basic-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-config-server/gogou-config-server.iml" filepath="$PROJECT_DIR$/gogou-config-server/gogou-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-eureka/gogou-eureka.iml" filepath="$PROJECT_DIR$/gogou-eureka/gogou-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-parent.iml" filepath="$PROJECT_DIR$/gogou-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-plat-parent/gogou-plat-interface/gogou-plat-interface.iml" filepath="$PROJECT_DIR$/gogou-plat-parent/gogou-plat-interface/gogou-plat-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-plat-parent/gogou-plat-parent.iml" filepath="$PROJECT_DIR$/gogou-plat-parent/gogou-plat-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-plat-parent/gogou-plat-service/gogou-plat-service.iml" filepath="$PROJECT_DIR$/gogou-plat-parent/gogou-plat-service/gogou-plat-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-product-parent/gogou-product-interface/gogou-product-interface.iml" filepath="$PROJECT_DIR$/gogou-product-parent/gogou-product-interface/gogou-product-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-product-parent/gogou-product-parent.iml" filepath="$PROJECT_DIR$/gogou-product-parent/gogou-product-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-product-parent/gogou-product-service/gogou-product-service.iml" filepath="$PROJECT_DIR$/gogou-product-parent/gogou-product-service/gogou-product-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-zuul/gogou-zuul.iml" filepath="$PROJECT_DIR$/gogou-zuul/gogou-zuul.iml" />
+    </modules>
+  </component>
+</project>

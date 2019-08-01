@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gogou" />
+        <module name="gogou-basic-generator" />
+        <module name="gogou-basic-util" />
+        <module name="gogou-config-server" />
+        <module name="gogou-eureka" />
+        <module name="gogou-plat-interface" />
+        <module name="gogou-plat-service" />
+        <module name="gogou-product-interface" />
+        <module name="gogou-product-service" />
+        <module name="gogou-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gogou" target="1.8" />
+      <module name="gogou-basic-generator" target="8" />
+      <module name="gogou-basic-parent" target="8" />
+      <module name="gogou-basic-util" target="8" />
+      <module name="gogou-config-server" target="8" />
+      <module name="gogou-eureka" target="8" />
+      <module name="gogou-parent" target="8" />
+      <module name="gogou-plat-interface" target="8" />
+      <module name="gogou-plat-parent" target="8" />
+      <module name="gogou-plat-service" target="8" />
+      <module name="gogou-product-interface" target="8" />
+      <module name="gogou-product-parent" target="8" />
+      <module name="gogou-product-service" target="8" />
+      <module name="gogou-zuul" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
