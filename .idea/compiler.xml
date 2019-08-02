@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="common-interface" />
+        <module name="common-service" />
         <module name="gogou" />
         <module name="gogou-basic-generator" />
         <module name="gogou-basic-util" />
@@ -19,10 +21,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="aigou-common-parent" target="8" />
+      <module name="common-interface" target="8" />
+      <module name="common-service" target="8" />
       <module name="gogou" target="1.8" />
       <module name="gogou-basic-generator" target="8" />
       <module name="gogou-basic-parent" target="8" />
       <module name="gogou-basic-util" target="8" />
+      <module name="gogou-common-parent" target="8" />
       <module name="gogou-config-server" target="8" />
       <module name="gogou-eureka" target="8" />
       <module name="gogou-parent" target="8" />

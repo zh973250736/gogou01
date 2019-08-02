@@ -1,14 +1,18 @@
 package cn.itsource.gogou.controller;
 
-import cn.itsource.gogou.service.IBrandService;
+
+
+import cn.itsource.basic.util.AjaxResult;
+import cn.itsource.basic.util.LetterUtil;
+import cn.itsource.basic.util.PageList;
 import cn.itsource.gogou.domain.Brand;
-import cn.itsource.aigou.query.BrandQuery;
-import cn.itsource.aigou.util.AjaxResult;
-import cn.itsource.aigou.util.PageList;
-import com.baomidou.mybatisplus.plugins.Page;
+import cn.itsource.gogou.query.BrandQuery;
+import cn.itsource.gogou.service.IBrandService;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -28,7 +32,11 @@ public class BrandController {
             if(brand.getId()!=null){
                 brandService.updateById(brand);
             }else{
-                brandService.insert(brand);
+                brand.setCreateTime(new Date().getTime());
+                //首字母
+                String firstLetter = LetterUtil.getFirstLetter(brand.getName());
+                brand.setFirstLetter(firstLetter.toUpperCase());
+                brandService.save(brand);
             }
             return AjaxResult.me();
         } catch (Exception e) {
@@ -45,7 +53,7 @@ public class BrandController {
     @RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
     public AjaxResult delete(@PathVariable("id") Integer id){
         try {
-            brandService.deleteById(id);
+            brandService.removeById(id);
             return AjaxResult.me();
         } catch (Exception e) {
         e.printStackTrace();
@@ -57,7 +65,7 @@ public class BrandController {
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public Brand get(@RequestParam(value="id",required=true) Long id)
     {
-        return brandService.selectById(id);
+        return brandService.getById(id);
     }
 
 
@@ -68,7 +76,7 @@ public class BrandController {
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public List<Brand> list(){
 
-        return brandService.selectList(null);
+        return brandService.list(null);
     }
 
 
@@ -81,8 +89,6 @@ public class BrandController {
     @RequestMapping(value = "/json",method = RequestMethod.POST)
     public PageList<Brand> json(@RequestBody BrandQuery query)
     {
-        Page<Brand> page = new Page<Brand>(query.getPage(),query.getRows());
-            page = brandService.selectPage(page);
-            return new PageList<Brand>(page.getTotal(),page.getRecords());
+        return brandService.queryPage(query);
     }
 }

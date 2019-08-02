@@ -6,6 +6,9 @@
     <file url="file://$PROJECT_DIR$/gogou-basic-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gogou-basic-parent/gogou-basic-generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gogou-basic-parent/gogou-basic-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gogou-common-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gogou-common-parent/common-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gogou-common-parent/common-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gogou-config-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gogou-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gogou-plat-parent" charset="UTF-8" />

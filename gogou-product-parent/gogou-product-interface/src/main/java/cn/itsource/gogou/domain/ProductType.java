@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -75,6 +77,10 @@ public class ProductType extends Model<ProductType> {
     @TableField("seoKeywords")
     private String seoKeywords;
 
+    private Long typeTemplateId;
+
+    @TableField(exist = false)
+    private List<ProductType> children = new ArrayList<>();//子类型
 
     public Long getId() {
         return id;
@@ -177,21 +183,43 @@ public class ProductType extends Model<ProductType> {
         return this.id;
     }
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Long getTypeTemplateId() {
+        return typeTemplateId;
+    }
+
+    public void setTypeTemplateId(Long typeTemplateId) {
+        this.typeTemplateId = typeTemplateId;
+    }
+
+    public List<ProductType> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<ProductType> children) {
+        this.children = children;
+    }
+
     @Override
     public String toString() {
         return "ProductType{" +
-        "id=" + id +
-        ", createTime=" + createTime +
-        ", updateTime=" + updateTime +
-        ", name=" + name +
-        ", pid=" + pid +
-        ", logo=" + logo +
-        ", description=" + description +
-        ", sortIndex=" + sortIndex +
-        ", path=" + path +
-        ", totalCount=" + totalCount +
-        ", seoTitle=" + seoTitle +
-        ", seoKeywords=" + seoKeywords +
-        "}";
+                "id=" + id +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", name='" + name + '\'' +
+                ", pid=" + pid +
+                ", logo='" + logo + '\'' +
+                ", description='" + description + '\'' +
+                ", sortIndex=" + sortIndex +
+                ", path='" + path + '\'' +
+                ", totalCount=" + totalCount +
+                ", seoTitle='" + seoTitle + '\'' +
+                ", seoKeywords='" + seoKeywords + '\'' +
+                ", typeTemplateId=" + typeTemplateId +
+                ", children=" + children +
+                '}';
     }
 }

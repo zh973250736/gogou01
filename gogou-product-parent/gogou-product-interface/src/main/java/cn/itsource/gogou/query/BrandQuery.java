@@ -1,10 +1,12 @@
-package cn.itsource.aigou.query;
+package cn.itsource.gogou.query;
 
+
+import cn.itsource.basic.util.BaseQuery;
 
 /**
  *
  * @author Alan
  * @since 2019-07-31
  */
-public class BrandQuery extends BaseQuery{
+public class BrandQuery extends BaseQuery {
 }

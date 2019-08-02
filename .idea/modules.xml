@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/gogou-common-parent/common-interface/common-interface.iml" filepath="$PROJECT_DIR$/gogou-common-parent/common-interface/common-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-common-parent/common-service/common-service.iml" filepath="$PROJECT_DIR$/gogou-common-parent/common-service/common-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gogou/gogou.iml" filepath="$PROJECT_DIR$/gogou/gogou.iml" />
       <module fileurl="file://$PROJECT_DIR$/gogou-basic-parent/gogou-basic-generator/gogou-basic-generator.iml" filepath="$PROJECT_DIR$/gogou-basic-parent/gogou-basic-generator/gogou-basic-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/gogou-basic-parent/gogou-basic-parent.iml" filepath="$PROJECT_DIR$/gogou-basic-parent/gogou-basic-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/gogou-basic-parent/gogou-basic-util/gogou-basic-util.iml" filepath="$PROJECT_DIR$/gogou-basic-parent/gogou-basic-util/gogou-basic-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gogou-common-parent/gogou-common-parent.iml" filepath="$PROJECT_DIR$/gogou-common-parent/gogou-common-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/gogou-config-server/gogou-config-server.iml" filepath="$PROJECT_DIR$/gogou-config-server/gogou-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/gogou-eureka/gogou-eureka.iml" filepath="$PROJECT_DIR$/gogou-eureka/gogou-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/gogou-parent.iml" filepath="$PROJECT_DIR$/gogou-parent.iml" />

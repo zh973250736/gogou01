@@ -52,7 +52,10 @@ public class Brand extends Model<Brand> {
      * 商品分类ID
      */
     @TableField("productType")
-    private Long productType;
+    private Long productTypeId;
+    //表示这个属性不会对应数据库中的列
+    @TableField(exist = false)
+    private ProductType productType;
 
     @TableField("sortIndex")
     private Integer sortIndex;
@@ -60,8 +63,25 @@ public class Brand extends Model<Brand> {
     /**
      * 品牌LOGO
      */
+
     private String logo;
 
+
+    public Long getProductTypeId() {
+        return productTypeId;
+    }
+
+    public void setProductTypeId(Long productTypeId) {
+        this.productTypeId = productTypeId;
+    }
+
+    public ProductType getProductType() {
+        return productType;
+    }
+
+    public void setProductType(ProductType productType) {
+        this.productType = productType;
+    }
 
     public Long getId() {
         return id;
@@ -119,13 +139,7 @@ public class Brand extends Model<Brand> {
         this.description = description;
     }
 
-    public Long getProductType() {
-        return productType;
-    }
 
-    public void setProductType(Long productType) {
-        this.productType = productType;
-    }
 
     public Integer getSortIndex() {
         return sortIndex;
@@ -148,19 +162,24 @@ public class Brand extends Model<Brand> {
         return this.id;
     }
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
     @Override
     public String toString() {
         return "Brand{" +
-        "id=" + id +
-        ", createTime=" + createTime +
-        ", updateTime=" + updateTime +
-        ", name=" + name +
-        ", englishName=" + englishName +
-        ", firstLetter=" + firstLetter +
-        ", description=" + description +
-        ", productType=" + productType +
-        ", sortIndex=" + sortIndex +
-        ", logo=" + logo +
-        "}";
+                "id=" + id +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", name='" + name + '\'' +
+                ", englishName='" + englishName + '\'' +
+                ", firstLetter='" + firstLetter + '\'' +
+                ", description='" + description + '\'' +
+                ", productTypeId=" + productTypeId +
+                ", productType=" + productType +
+                ", sortIndex=" + sortIndex +
+                ", logo='" + logo + '\'' +
+                '}';
     }
 }

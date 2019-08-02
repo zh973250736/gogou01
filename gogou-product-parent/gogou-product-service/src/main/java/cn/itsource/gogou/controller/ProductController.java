@@ -1,11 +1,12 @@
 package cn.itsource.gogou.controller;
 
+import cn.itsource.basic.util.AjaxResult;
+import cn.itsource.basic.util.PageList;
+import cn.itsource.gogou.query.ProductQuery;
 import cn.itsource.gogou.service.IProductService;
 import cn.itsource.gogou.domain.Product;
-import cn.itsource.aigou.query.ProductQuery;
-import cn.itsource.aigou.util.AjaxResult;
-import cn.itsource.aigou.util.PageList;
-import com.baomidou.mybatisplus.plugins.Page;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +29,7 @@ public class ProductController {
             if(product.getId()!=null){
                 productService.updateById(product);
             }else{
-                productService.insert(product);
+                productService.save(product);
             }
             return AjaxResult.me();
         } catch (Exception e) {
@@ -45,7 +46,7 @@ public class ProductController {
     @RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
     public AjaxResult delete(@PathVariable("id") Integer id){
         try {
-            productService.deleteById(id);
+            productService.removeById(id);
             return AjaxResult.me();
         } catch (Exception e) {
         e.printStackTrace();
@@ -57,7 +58,7 @@ public class ProductController {
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public Product get(@RequestParam(value="id",required=true) Long id)
     {
-        return productService.selectById(id);
+        return productService.getById(id);
     }
 
 
@@ -68,7 +69,7 @@ public class ProductController {
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public List<Product> list(){
 
-        return productService.selectList(null);
+        return productService.list(null);
     }
 
 
@@ -81,8 +82,11 @@ public class ProductController {
     @RequestMapping(value = "/json",method = RequestMethod.POST)
     public PageList<Product> json(@RequestBody ProductQuery query)
     {
-        Page<Product> page = new Page<Product>(query.getPage(),query.getRows());
+
+        IPage<Product> page = productService.page(new Page<Product>(query.getPageNum(),query.getPageSize()));
+        return new PageList<>(page.getTotal(),page.getRecords());
+        /*Page<Product> page = new Page<Product>(query.getPage(),query.getRows());
             page = productService.selectPage(page);
-            return new PageList<Product>(page.getTotal(),page.getRecords());
+            return new PageList<Product>(page.getTotal(),page.getRecords());*/
     }
 }
